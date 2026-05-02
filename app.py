@@ -19,7 +19,7 @@ def get_location():
         return "Unknown"
 
 # ---------------- DB ----------------
-engine = create_engine("mysql+pymysql://root:admin@localhost/traceability")
+engine = create_engine("sqlite:///data.db")
 
 Base = declarative_base()
 
