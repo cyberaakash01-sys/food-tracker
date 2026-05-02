@@ -93,6 +93,7 @@ if st.button("Generate QR"):
         st.success("QR Generated")
         st.image("qr.png")
         st.write(product_id)
+        st.download_button("Download QR", open("qr.png","rb"), "qr.png")
 
     else:
         st.error("Fill all fields")
