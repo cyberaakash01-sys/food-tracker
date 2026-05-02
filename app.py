@@ -242,3 +242,15 @@ if st.session_state.product_id:
 
 else:
     st.info("📌 Scan QR first")
+
+st.header("📊 View Database")
+
+if st.button("Show All Products"):
+    products = session.query(Product).all()
+    for p in products:
+        st.write(vars(p))
+
+if st.button("Show Scan Logs"):
+    logs = session.query(ScanLog).all()
+    for l in logs:
+        st.write(vars(l))
