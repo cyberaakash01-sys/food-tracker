@@ -86,7 +86,7 @@ if st.button("Generate QR"):
 
         hostname = socket.gethostname()
         ip=socket.gethostbyname(hostname)
-        url = f"http://{ip}:8501/?id={product_id}"
+        url = f"https://food-tracker.streamlit.app/?id={product_id}"
         qr = qrcode.make(url)
         qr.save("qr.png")
 
